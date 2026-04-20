@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "14a3593f-d7a3-4725-ac70-bd9928675c76"
+      }
+    },
+    "android": {
+      "package": "com.mohanflyhii.backend"
+    }
+  }
+}
