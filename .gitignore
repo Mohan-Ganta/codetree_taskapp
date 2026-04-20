@@ -5,3 +5,5 @@ check-users-simple.js
 fix-admin.js
 test_create.js
 reset-admin.js
+appcode/nexus-app-rtgs.json
+appcode/google-services.json
