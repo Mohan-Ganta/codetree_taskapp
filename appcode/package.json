@@ -1,5 +1,5 @@
 {
-  "name": "codetree-taskapp",
+  "name": "codetree-track",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -33,6 +33,8 @@
   },
   "private": true,
   "devDependencies": {
-    "babel-preset-expo": "~54.0.10"
+    "@types/react": "~19.1.10",
+    "babel-preset-expo": "~54.0.10",
+    "typescript": "~5.9.2"
   }
 }

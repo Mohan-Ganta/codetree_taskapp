@@ -15,13 +15,24 @@
                 "simulator": true
             }
         },
-        "production": {}
+        "production": {
+            "android": {
+                "buildType": "app-bundle"
+            },
+            "ios": {
+                "distribution": "store"
+            }
+        }
     },
     "submit": {
         "production": {
             "android": {
-                "track": "beta",
+                "track": "internal",
                 "releaseStatus": "draft"
+            },
+            "ios": {
+                "appleId": "gantamohan.557@gmail.com",
+                "appleTeamId": "C684UHDP2S"
             }
         }
     }

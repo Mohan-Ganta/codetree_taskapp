@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Codetree Taskapp",
+    "name": "CodeTree Track",
     "slug": "codetree-taskapp",
     "version": "1.0.1",
     "orientation": "portrait",
@@ -14,7 +14,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.codetree.taskapp",
-      "buildNumber": "4",
+      "buildNumber": "5",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
         "UIBackgroundModes": [
@@ -30,7 +30,7 @@
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
       "package": "com.codetree.taskapp",
-      "versionCode": 5,
+      "versionCode": 6,
       "permissions": [
         "NOTIFICATIONS",
         "RECEIVE_BOOT_COMPLETED",
@@ -55,9 +55,9 @@
     },
     "extra": {
       "eas": {
-        "projectId": "dc9361c3-8b81-414c-b80a-98bd8441e431"
+        "projectId": "13214736-9f47-4b9a-8805-f5884980a177"
       }
     },
-    "owner": "dattiganesh"
+    "owner": "mohanflyhii"
   }
 }
