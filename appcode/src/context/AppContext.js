@@ -247,7 +247,7 @@ export const AppProvider = ({ children }) => {
             if (!user) throw new Error('User not logged in');
             const res = await axios.post(`${BASE_URL}/tasks`, {
                 ...taskData,
-                createdBy: user.role === 'MainOfficer' ? user.name : 'Principle Secretary'
+                createdBy: user.role === 'MainOfficer' ? user.name : 'Indira Vara Prasad Seerla, MD'
             });
             const newTask = normalize(res.data);
             setTasks([newTask, ...tasks]);

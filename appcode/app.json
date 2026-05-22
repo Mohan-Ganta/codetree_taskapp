@@ -2,7 +2,7 @@
   "expo": {
     "name": "Codetree Taskapp",
     "slug": "codetree-taskapp",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -30,14 +30,18 @@
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
       "package": "com.codetree.taskapp",
-      "versionCode": 4,
-      "googleServicesFile": "./google-services.json"
+      "versionCode": 5,
+      "permissions": [
+        "NOTIFICATIONS",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE",
+        "INTERNET"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "./withAndroidAssets",
       [
         "expo-notifications",
         {
@@ -46,10 +50,14 @@
         }
       ]
     ],
+    "updates": {
+      "enabled": false
+    },
     "extra": {
       "eas": {
-        "projectId": "5583cd78-b91b-4687-9549-48fc6e5bdd32"
+        "projectId": "dc9361c3-8b81-414c-b80a-98bd8441e431"
       }
-    }
+    },
+    "owner": "dattiganesh"
   }
 }

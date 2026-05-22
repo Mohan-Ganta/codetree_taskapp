@@ -13,7 +13,7 @@ const TableHeader = () => (
         <View style={[styles.cell, { width: 130 }]}><Text style={styles.headerText}>Suggested Time Line</Text></View>
         <View style={[styles.cell, { width: 120 }]}><Text style={styles.headerText}>Status (Today)</Text></View>
         <View style={[styles.cell, { width: 180 }]}><Text style={styles.headerText}>Remarks by Officer</Text></View>
-        <View style={[styles.cell, { width: 180 }]}><Text style={styles.headerText}>Principle Secretary Remarks</Text></View>
+        <View style={[styles.cell, { width: 180 }]}><Text style={styles.headerText}>Secretary Remarks</Text></View>
     </View>
 );
 
@@ -344,7 +344,7 @@ const TaskList = ({ navigation, route }) => {
                 <View style={styles.modalOverlay}>
                     <View style={styles.modalContent}>
                         <View style={styles.modalHeader}>
-                            <Text style={styles.modalTitle}>Principle Secretary Response</Text>
+                            <Text style={styles.modalTitle}>Secretary Response</Text>
                             <TouchableOpacity onPress={() => setResponseModalVisible(false)}>
                                 <X size={24} color={colors.text} />
                             </TouchableOpacity>

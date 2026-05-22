@@ -401,7 +401,7 @@ app.post('/api/tasks', async (req, res) => {
             suggestedTimeline: suggestedTimeline || 'Within 7 days',
             timeline: [{
                 type: 'created',
-                user: createdBy || 'Principle Secretary',
+                user: createdBy || 'Indira Vara Prasad Seerla, MD',
                 date: new Date()
             }]
         });
@@ -693,7 +693,7 @@ app.put('/api/tasks/:id', async (req, res) => {
             const timeline = task.timeline || [];
             task.timeline = [...timeline, {
                 type: 'admin_response',
-                user: 'Principle Secretary',
+                user: 'Indira Vara Prasad Seerla, MD',
                 remark: updateData.adminRemarks || 'Instruction updated',
                 status: updateData.status || task.status,
                 progress: updateData.progressStatus || task.progressStatus,
@@ -1217,7 +1217,7 @@ async function seedData() {
     if (count === 0) {
         const hashedPassword = await bcrypt.hash('Codetree@2026!', 10);
         await Officer.create({
-            username: 'admin', password: hashedPassword, name: 'Shri. Bhaskar Katamneni, IAS',
+            username: 'admin', password: hashedPassword, name: 'Indira Vara Prasad Seerla, MD',
             email: 'admin@codetree.com', phoneNumber: '0000000000', designation: 'Principal Secretary',
             role: 'MainOfficer', mustChangePassword: false
         });

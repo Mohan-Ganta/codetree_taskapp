@@ -4,16 +4,16 @@ import { colors } from '../theme/colors';
 
 export const StatusBadge = ({ status }) => {
     const getStatusStyle = () => {
-        if (!status) return { backgroundColor: '#F3F4F6', color: '#374151' };
+        if (!status) return { backgroundColor: '#F3F4F6', color: '#374151', label: 'Unknown' };
         switch (status.toLowerCase()) {
             case 'open':
-                return { backgroundColor: '#DBEAFE', color: '#1E40AF', label: 'Open' }; // Blue
+                return { backgroundColor: '#E8F5EE', color: '#1B6B3A', label: 'Open' };
             case 'submitted':
-                return { backgroundColor: '#FEF3C7', color: '#92400E', label: 'Request Closed' }; // Amber
+                return { backgroundColor: '#FEF3C7', color: '#92400E', label: 'Request Closed' };
             case 'closed':
-                return { backgroundColor: '#D1FAE5', color: '#065F46', label: 'Closed' }; // Green
+                return { backgroundColor: '#D1FAE5', color: '#065F46', label: 'Closed' };
             case 'pending update':
-                return { backgroundColor: '#FEE2E2', color: '#991B1B', label: 'Pending Update' }; // Red
+                return { backgroundColor: '#FEE2E2', color: '#991B1B', label: 'Pending Update' };
             default:
                 return { backgroundColor: '#F3F4F6', color: '#374151', label: status };
         }
@@ -30,6 +30,7 @@ export const StatusBadge = ({ status }) => {
 
 export const PriorityBadge = ({ priority }) => {
     const getPriorityStyle = () => {
+        if (!priority) return { backgroundColor: '#F3F4F6', color: '#374151' };
         switch (priority.toLowerCase()) {
             case 'high':
                 return { backgroundColor: '#FEE2E2', color: '#991B1B' };

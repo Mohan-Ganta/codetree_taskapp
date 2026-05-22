@@ -96,7 +96,7 @@ const TaskDetail = ({ route, navigation }) => {
 
                     {task.adminRemarks && (
                         <View style={styles.adminRemarksBox}>
-                            <Text style={styles.adminRemarksLabel}>SHRI. BHASKAR KHATAMNENI, IAS — REMARKS</Text>
+                            <Text style={styles.adminRemarksLabel}>INDIRA VARA PRASAD SEERLA, MD — REMARKS</Text>
                             <Text style={styles.adminRemarksText}>{task.adminRemarks}</Text>
                         </View>
                     )}
@@ -211,7 +211,7 @@ const TaskDetail = ({ route, navigation }) => {
                         <View style={styles.modalHeader}>
                             <Text style={styles.modalTitle}>
                                 {modalType === 'reopen' || modalType === 'reject' ? 'Reopen/Reject' :
-                                    modalType === 'admin_response' ? 'Shri. Bhaskar Khatamneni, IAS — Response' : 'Close/Approve'}
+                                    modalType === 'admin_response' ? 'Indira Vara Prasad Seerla, MD — Response' : 'Close/Approve'}
                             </Text>
                             <TouchableOpacity onPress={() => setModalVisible(false)}>
                                 <X size={24} color={colors.text} />
@@ -541,7 +541,7 @@ const styles = StyleSheet.create({
     },
     primaryBtnText: {
         color: colors.surface,
-        fontWeight: 'BOLD',
+        fontWeight: 'bold',
         fontSize: 14,
         marginLeft: 8,
     },
@@ -552,7 +552,7 @@ const styles = StyleSheet.create({
     },
     secondaryBtnText: {
         color: colors.primary,
-        fontWeight: 'BOLD',
+        fontWeight: 'bold',
         fontSize: 14,
         marginLeft: 8,
     },
