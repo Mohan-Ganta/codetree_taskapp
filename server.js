@@ -1197,6 +1197,25 @@ app.delete('/api/officers/:id', async (req, res) => {
     }
 });
 
+// --- TEMP: One-time admin password reset (REMOVE AFTER USE) ---
+app.get('/api/debug/reset-admin-password', async (req, res) => {
+    try {
+        const newPassword = 'Codetree@2026!';
+        const hashedPassword = await bcrypt.hash(newPassword, 10);
+        const [updated] = await Officer.update(
+            { password: hashedPassword, mustChangePassword: false },
+            { where: { username: 'admin' } }
+        );
+        if (updated) {
+            res.json({ message: '✅ Admin password reset to Codetree@2026!' });
+        } else {
+            res.status(404).json({ message: '❌ Admin user not found' });
+        }
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
 // --- DEBUG ROUTES ---
 app.get('/api/debug/email-status', async (req, res) => {
     try {
