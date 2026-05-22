@@ -19,6 +19,9 @@ const expo = new Expo();
 const uploadDir = path.join(__dirname, 'uploads', 'idproofs');
 if (!fs.existsSync(uploadDir)) fs.mkdirSync(uploadDir, { recursive: true });
 
+const qrCodesDir = path.join(__dirname, 'uploads', 'qrcodes');
+if (!fs.existsSync(qrCodesDir)) fs.mkdirSync(qrCodesDir, { recursive: true });
+
 const storage = multer.diskStorage({
     destination: (req, file, cb) => cb(null, uploadDir),
     filename: (req, file, cb) => {
@@ -961,9 +964,13 @@ app.put('/api/appointments/:id/status', async (req, res) => {
             if (gatePassId) {
                 gatePassQrImage = await QRCode.toDataURL(String(gatePassId));
                 // Also save to disk for external use/WhatsApp
-                const qrPath = path.join(__dirname, 'uploads', 'qrcodes', `qr-${appointment.id}.png`);
-                const base64Data = gatePassQrImage.replace(/^data:image\/png;base64,/, "");
-                require('fs').writeFileSync(qrPath, base64Data, 'base64');
+                try {
+                    const qrPath = path.join(qrCodesDir, `qr-${appointment.id}.png`);
+                    const base64Data = gatePassQrImage.replace(/^data:image\/png;base64,/, "");
+                    fs.writeFileSync(qrPath, base64Data, 'base64');
+                } catch (qrErr) {
+                    console.error('❌ QR save error:', qrErr.message);
+                }
             }
 
             // Appointment summary QR (full details)
